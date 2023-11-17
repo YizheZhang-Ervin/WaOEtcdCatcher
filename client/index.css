@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    background-color: black;
+    color: gold;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+
+.textarea {
+    height: 90%;
+    width: 95%;
+}
+
+.w30 {
+    height: 99vh;
+    width: 33vw;
+    border: gold dashed 1px;
+    overflow-y: auto;
+}

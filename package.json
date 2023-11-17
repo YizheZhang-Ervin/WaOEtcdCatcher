@@ -1,0 +1,24 @@
+{
+  "name": "etcd-catcher",
+  "description": "etcd direct connection UI",
+  "version": "1.0.0",
+  "main": "./server/app.js",
+  "scripts": {
+    "dev": "node ./server/app.js",
+    "start": "pm2 start ./server/app.js -n etcd_watcher",
+    "restart": "pm2 restart etcd_watcher",
+    "stop": "pm2 stop etcd_watcher",
+    "log": "pm2 logs etcd_watcher",
+    "delete": "pm2 delete etcd_watcher",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ervin",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.2",
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0",
+    "pm2": "^5.3.0"
+  }
+}

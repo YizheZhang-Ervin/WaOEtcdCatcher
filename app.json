@@ -1,0 +1,8 @@
+{
+    "ca": "./certs/ca.crt",
+    "key": "./certs/server.key",
+    "cert": "./certs/server.crt",
+    "baseUrl": "https://192.168.137.10:2379",
+    "timeout": 6000,
+    "port": 5000
+}
