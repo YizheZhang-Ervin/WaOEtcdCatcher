@@ -1,19 +1,31 @@
 # etcd-catcher
 
+## Features
+```
+- Call Etcd API from Browser
+- Invoke WebSSH from Browser
+```
+
+## Technologies
+```
+- Vue with axios,xterm
+- Express with axios,ssh2,ws
+```
+
 ## CMD
 ```
-# 初始化
+# Initialize
 npm init
 npm i express body-parser axios morgan ssh2 ws utf8
 npm run dev
 
-# 使用test
+# Test
 npm install
 npm run dev
 
-# 使用prod
+# Production
 npm run start
 
-# release
+# Release
 git push --tags
 ```
