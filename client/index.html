@@ -5,19 +5,23 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Etcd Catcher</title>
+        <link rel="stylesheet" href="https://unpkg.com/xterm@5.1.0/css/xterm.css">
         <link rel="stylesheet" href="./index.css">
     </head>
 
     <body>
         <div id="app">
-            <section class="flex">
+            <button @click="changeComponent" class="btn">Switch Mode</button>
+            <span>Current Mode is: {{currentMode}}</span>
+            <section class="flex" v-if="displayAPI">
                 <div class="w30">
                     <h1>Menu
-                        <button @click="callEtcd">调用ETCD</button>
+                        <button @click="callEtcd" class="btn">Call</button>
                     </h1>
-                    <input v-model="plainTxt" placeholder="请输入明文" @blur="transformText" />
+                    <input v-model="plainTxt" placeholder="Enter plainText" @blur="transformText" />
                     <span>{{encryptedTxt}}</span>
-                    <textarea class="textarea" v-model="reqBody" placeholder="请输入请求体{method,url,params,data}">
+                    <textarea class="textarea" v-model="reqBody"
+                        placeholder="Enter Request Body{method,url,params,data}">
                     </textarea>
                 </div>
                 <div class="w30">
@@ -29,12 +33,16 @@
                     <pre>{{result}}</pre>
                 </div>
             </section>
-            <!-- <extra /> -->
+            <webssh v-else />
         </div>
         <!-- vue -->
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
         <!-- axios -->
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <!-- xterm -->
+        <script src="https://unpkg.com/xterm@5.1.0/lib/xterm.js"></script>
+        <script src="https://unpkg.com/xterm-addon-fit@0.7.0/lib/xterm-addon-fit.js"></script>
+        <script src="https://unpkg.com/xterm-addon-attach@0.7.0/lib/xterm-addon-attach.js"></script>
         <!-- app -->
         <script src="./index.js" type="module" async></script>
     </body>

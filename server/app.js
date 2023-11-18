@@ -6,6 +6,7 @@ const handler = require("./handler")
 const path = require("path")
 const http = require("http")
 const configJson = require("../app.json")
+require("./websocket.js")
 
 // log
 app.use(logger("dev"));

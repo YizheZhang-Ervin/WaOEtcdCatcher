@@ -4,7 +4,7 @@
 ```
 # 初始化
 npm init
-npm i express body-parser axios morgan
+npm i express body-parser axios morgan ssh2 ws utf8
 npm run dev
 
 # 使用test

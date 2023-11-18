@@ -2,6 +2,12 @@
     margin: 0;
     background-color: black;
     color: gold;
+    overflow: hidden !important;
+}
+
+#xterm {
+    height: 100vh;
+    width: 100vw;
 }
 
 .flex {
@@ -17,8 +23,22 @@
 }
 
 .w30 {
-    height: 99vh;
-    width: 33vw;
+    height: 95vh;
+    width: 32vw;
     border: gold dashed 1px;
+    overflow-y: auto;
+}
+
+.btn {
+    width: 150px;
+    height: 25px;
+    background-color: gold;
+    color: black;
+    border-radius: 15px;
+}
+
+.webssh {
+    max-height: 95vh;
+    max-width: 95vw;
     overflow-y: auto;
 }

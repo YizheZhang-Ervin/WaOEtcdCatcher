@@ -1,4 +1,4 @@
-import extra from "./extra.js"
+import webssh from "./webssh.js"
 
 const { createApp } = Vue
 
@@ -96,7 +96,9 @@ const app = createApp({
             ],
             result: undefined,
             plainTxt: undefined,
-            encryptedTxt: undefined
+            encryptedTxt: undefined,
+            displayAPI: true,
+            currentMode: "API"
         }
     },
     mounted() {
@@ -114,8 +116,12 @@ const app = createApp({
         },
         transformText() {
             this.encryptedTxt = btoa(this.plainTxt)
+        },
+        changeComponent() {
+            this.displayAPI = !this.displayAPI
+            this.displayAPI ? this.currentMode = "API" : this.currentMode = "WebSSH"
         }
     }
 })
-app.component("extra", extra)
+app.component("webssh", webssh)
 app.mount('#app')
