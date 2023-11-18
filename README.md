@@ -13,4 +13,7 @@ npm run dev
 
 # 使用prod
 npm run start
+
+# release
+git push --tags
 ```
